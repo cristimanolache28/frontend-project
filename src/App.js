@@ -1,13 +1,11 @@
 import { Component } from 'react';
 import './App.css'; 
-import LearningComponent from './components/learning-examplex/LearningComponent';
-import LearnJavaScript from './components/learning-examplex/LearnJavaScript';
+import Counter from './components/learning-examplex/counter/Counter';
 
 function App() {
   return (
     <div className="App">
-     <LearningComponent/>
-     <LearnJavaScript/>
+     <Counter></Counter>
     </div>
   );
 }
