@@ -1,14 +1,11 @@
-import { Component } from 'react';
+// import { Component } from 'react';
 import './App.css'; 
-import Counter from './components/learning-examplex/counter/Counter';
+import TodoApp from './components/todo/TodoApp'
 
 function App() {
   return (
     <div className="App">
-     <Counter by="1"></Counter>
-     <Counter by="2"></Counter>
-     <Counter by="6"></Counter>
-     <PlayWithProps property1="prop1" property2="prop2"></PlayWithProps>
+      <TodoApp></TodoApp>
     </div>
   );
 }
@@ -23,12 +20,6 @@ function App() {
 //   )
 // }
 
-function PlayWithProps({property1, property2}) {
-  console.log(property1)
-  console.log(property2)
-  return (
-    <div>Props</div>
-  )
-}
+//  
 
 export default App;
