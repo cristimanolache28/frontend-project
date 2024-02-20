@@ -2,13 +2,18 @@ import { useState } from 'react'
 import './Counter.css'
 
 
-export default function Counter() {
+export default function Counter({by}) {
 
     //[0,f]
     const [count, setCount] = useState(0);
 
+
     function incrementCounterFunction() {
-        setCount(count + 1)
+        setCount(count + by)
+    }
+
+    function decrementCounterFunction() {
+        setCount(count - by)
     }
     
     return (
@@ -17,7 +22,10 @@ export default function Counter() {
             <div>
                 <button className="counterButton" 
                     onClick={incrementCounterFunction}
-                >increment</button>
+                >+{by}</button>
+                 <button className="counterButton" 
+                    onClick={decrementCounterFunction}
+                >+{by}</button>
             </div>
         </div>
     )

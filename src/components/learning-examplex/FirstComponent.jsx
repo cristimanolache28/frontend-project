@@ -4,3 +4,8 @@ export default function FirstComponent() {
     )
   } 
 
+export default function FifthComponent() {
+  return (
+    <div className="FifthComponent">Fifth Component</div>
+  )
+}
