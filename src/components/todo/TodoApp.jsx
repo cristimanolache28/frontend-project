@@ -6,6 +6,7 @@ import {BrowserRouter, Routes, Route, useNavigate, useParams, Link} from 'react-
 export default  function TodoApp() {
     return(
         <div className="TodoApp">
+            <HeaderComponent/>
             <BrowserRouter>
                 <Routes>
                 <Route path='' element={<LoginComponent/>}></Route>
@@ -16,6 +17,7 @@ export default  function TodoApp() {
                     <Route path='*' element={<ErrorComponent/>}></Route>
                 </Routes>
             </BrowserRouter>
+            <FooterComponent/>
         </div>
     )
 }
@@ -158,6 +160,22 @@ const todos = [
                     </tbody>
                 </table>
             </div>
+        </div>
+    )
+}
+
+function HeaderComponent() {
+    return (
+        <div className="header">
+            Header <hr/>
+        </div>
+    )
+}
+
+function FooterComponent() {
+    return (
+        <div className="footer">
+            <hr/> Footer 
         </div>
     )
 }
