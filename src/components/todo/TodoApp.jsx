@@ -6,8 +6,9 @@ import {BrowserRouter, Routes, Route, useNavigate, useParams, Link} from 'react-
 export default  function TodoApp() {
     return(
         <div className="TodoApp">
-            <HeaderComponent/>
+            
             <BrowserRouter>
+            <HeaderComponent/>
                 <Routes>
                 <Route path='' element={<LoginComponent/>}></Route>
                     <Route path='/login' element={<LoginComponent/>}></Route>
@@ -16,8 +17,8 @@ export default  function TodoApp() {
 
                     <Route path='*' element={<ErrorComponent/>}></Route>
                 </Routes>
-            </BrowserRouter>
-            <FooterComponent/>
+                <FooterComponent/>
+            </BrowserRouter> 
         </div>
     )
 }
@@ -131,10 +132,10 @@ const todos = [
 ]
 
     return (
-        <div className="ListTodosComponent">
+        <div className="container">
             <h1>Things you want To Do!</h1>
             <div>
-                <table>
+                <table className='table'>
                     <thead>
                         <tr>
                             <td>Id</td>
@@ -166,16 +167,32 @@ const todos = [
 
 function HeaderComponent() {
     return (
-        <div className="header">
-            Header <hr/>
-        </div>
+        <header className="header">
+           <div className='container'>
+                <nav className="navbar navbar-expand-lg">
+                    <a className="navbar-brand ms-2 fs-2 fw-bold text-black" href="https://www.in28minutes.com">in28minutes</a>
+                    <div className="collapse navbar-collapse">
+                        <ul className="navbar-nav">
+                            <li className="nav-item fs-5"><Link className="nav-link" to="/welcome/in28minutes">Home</Link></li>
+                            <li className="nav-item fs-5"><Link className="nav-link" to="/todos">Todos</Link></li>
+                        </ul>
+                    </div>
+                    <ul className="navbar-nav">
+                        <li className="nav-item fs-5"><Link className="nav-link" to="/login">Login</Link></li>
+                        <li className="nav-item fs-5"><Link className="nav-link" to="/logout">Logout</Link></li>
+                    </ul>
+                </nav>
+           </div>
+        </header>
     )
 }
 
 function FooterComponent() {
     return (
-        <div className="footer">
-            <hr/> Footer 
-        </div>
+        <footer className="footer">
+            <div className='container'>
+                Yout Footer    
+            </div>
+        </footer>
     )
 }
